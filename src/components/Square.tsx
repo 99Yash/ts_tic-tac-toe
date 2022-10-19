@@ -6,9 +6,10 @@ function Square(props: {
   onClick: () => void;
 }) {
   if (!props.value) {
+    // button unclicked state
     return (
       <button
-        className="w-24 h-24 text-lg border-gray-500"
+        className="w-24 h-24 mt-4 text-lg bg-pink-400 border-gray-500"
         onClick={props.onClick}
         disabled={Boolean(props.winner)}
       />
@@ -17,7 +18,7 @@ function Square(props: {
   return (
     <button
       disabled
-      className="w-24 h-24 text-lg border border-gray-400 "
+      className="w-24 h-24 text-lg border bg-pink-400 border-gray-400 "
       onClick={props.onClick}
     >
       {props.value}
