@@ -5,9 +5,13 @@ import { Player } from '../components/Square';
 const Board = () => {
   const [squares, setSquares] = React.useState(Array(9).fill(null));
   // Array(9).fill(null)) ==> [nul,null,....,null]
+
+  // current player is either 'X' or 'O'
   const [currentPlayer, setCurrentPlayer] = React.useState<'X' | 'O'>(
     Math.random() > 0.5 ? 'X' : 'O'
   );
+
+  // winner is either 'X', 'O', or 'draw'
   const [winner, setWinner] = React.useState<Player | 'draw'>(null);
 
   const setSquareValue = (index: number) => {

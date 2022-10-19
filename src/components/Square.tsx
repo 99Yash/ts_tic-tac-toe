@@ -6,7 +6,7 @@ function Square(props: {
   onClick: () => void;
 }) {
   if (!props.value) {
-    // button unclicked state
+    // squares' initial state
     return (
       <button
         className="w-24 h-24 mt-4 text-lg bg-pink-400 border-gray-500"
