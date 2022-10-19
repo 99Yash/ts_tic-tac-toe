@@ -4,7 +4,7 @@ import { Player } from '../components/Square';
 
 const Board = () => {
   const [squares, setSquares] = React.useState(Array(9).fill(null));
-  // [nul,null,....,null]
+  // Array(9).fill(null)) ==> [nul,null,....,null]
   const [currentPlayer, setCurrentPlayer] = React.useState<'X' | 'O'>(
     Math.random() > 0.5 ? 'X' : 'O'
   );
